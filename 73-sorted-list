@@ -10,7 +10,7 @@ public boolean isSorted(List<Integer> numbers) {
         {
             if (direction == '')
             {
-                direction = numbers[i] < numbers[i+1] ? 'desc' : 'asc';
+                direction = numbers[i] < numbers[i+1] ? 'asc' : 'desc';
             }
             else
             {
