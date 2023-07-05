@@ -1,7 +1,7 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
    Set<Id> resultSet = new Set<Id>();
    for (Opportunity o : opps) {
-       if (!String.isBlank(o.AccountId) resultSet.add(o.AccountId);
+       if (!String.isBlank(o.AccountId)) resultSet.add(o.AccountId);
    }
    return resultSet;
 }
