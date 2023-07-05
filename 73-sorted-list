@@ -6,8 +6,8 @@ public boolean isSorted(List<Integer> numbers) {
 
     for (Integer i = 0; i < numbers.size(); i++)
     {
-        if (numbers[i] == numbers[i+1]) continue;
         if (i == numbers.size()-1) return true;
+        if (numbers[i] == numbers[i+1]) continue;
         if (direction == '') {
             direction = numbers[i] > numbers[i+1] ? 'desc' : 'asc';
         }
