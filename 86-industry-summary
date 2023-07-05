@@ -2,7 +2,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     Map<String,Decimal> resultList = new Map<String,Decimal>();
     for (Account a : accounts)
     {
-        if (!String.isEmpty(a.Industry) && !String.isEmpty(a.AnnualRevenue))
+        if (!String.isBlank(a.Industry) || !String.isBlank(a.AnnualRevenue))
         {
             if (!resultList.containsKey(a.Industry))
             {
