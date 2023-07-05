@@ -1,0 +1,12 @@
+public Boolean isKeyAccount(Account a) {
+    Map<String,Double> keyAccountMap = new Map<String,Double>{
+        'Banking' => 600000,
+        'Technology' => 800000,
+        'Retail' => 2000000
+    };
+    if (keyAccountMap.containsKey(a.Industry))
+    {
+        return a.AnnualRevenue >= keyAccountMap.get(a.Industry);
+    }
+    return a.AnnualRevenue >= 500000;
+}
