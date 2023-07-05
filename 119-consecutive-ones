@@ -9,7 +9,10 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             currentNumOfOnes++;
         }
         else {
-            largestNumOfOnes = currentNumOfOnes;
+            if (currentNumOfOnes > largestNumOfOnes)
+            {
+                largestNumOfOnes = currentNumOfOnes;
+            }
             currentNumOfOnes = 0;
         }
     }
