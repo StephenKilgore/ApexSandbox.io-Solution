@@ -1,0 +1,18 @@
+public boolean isSorted(List<Integer> numbers) {
+    
+    String direction = '';
+
+    if (numbers.size < 3) return true;
+
+    for (Integer i = 0; i < numbers.size(); i++)
+    {
+        if (numbers[i] == numbers[i+1]) continue;
+        if (i == numbers.size()-1) return true;
+        if (direction == '') {
+            direction = numbers[i] > numbers[i+1] ? 'desc' : 'asc';
+        }
+        return (direction == 'desc' && numbers[i] > numbers[i+2]) || (direction == 'asc' && numbers[i] < numbers[i+2]); 
+
+    }
+    return false;
+}
