@@ -1,0 +1,15 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    List<Integer> resultList = new List<Integer>();
+
+    for (Integer i = 0; i < n; i++)
+    {
+        if (i == 0 || i == 1)
+        {
+            resultList.add(1);
+        }
+        else {
+            resultList.add(resultList[resultList.size()-1] + resultList[resultList.size()-2]);
+        }
+    }
+    return resultList;
+}
