@@ -1,0 +1,6 @@
+public String nameFromEmail(String email) {
+    Integer indexOfPeriod = email.indexOf('.');
+    Integer indexOfAt = email.indexOf('@');
+
+    return email.subString(0,indexOfPeriod).toLowerCase().capitalize() + ' ' + email.subString(indexOfPeriod+1, indexOfAt).toLowerCase().capitalize();
+}
