@@ -4,6 +4,4 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
 
    return set1.equals(set2);
 
-  
-   }
 }
