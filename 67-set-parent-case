@@ -7,7 +7,7 @@ public void linkParent(Case c1, Case c2) {
         {
             c2.parentId = c1.Id;
         }
-        else {
+        else if (c2.ContactId > c1.ContactId) {
             c1.parentId = c2.Id;
         }
     }
