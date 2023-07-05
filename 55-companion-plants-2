@@ -6,14 +6,14 @@ public Boolean companionPlants(List<String> plants) {
         'carrots' => 'onions',
         'tomatoes' => 'onions'
     };
-    for (Integer i = 0; i < companionList.size(); i++)
+    for (Integer i = 0; i < plants.size(); i++)
     {
         //last element
-        if (i == companionList.size()-1)
+        if (i == plants.size()-1)
         {
             return true;
         }
-        if (companionList[i] == companionList[i+1] || companionList.get(plant1).indexOf(plant2) == -1 )
+        if (plants[i] == plants[i+1] || companionList.get(plants[i]).indexOf(plants[i+1]) == -1 )
         {
             return false;
         }
