@@ -1,10 +1,20 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
-    String intString = '';
+    Integer currentNumOfOnes = 0;
+    Integer largestNumOfOnes = 0;
 
     for (Integer num : numbers)
     {
-        intString += String.valueOf(num);
+        if (num == 1)
+        {
+            currentNumOfOnes++;
+        }
+        else {
+            if (currentNumOfOnes > largestNumOfOnes)
+            {
+                largestNumOfOnes = currentNumOfOnes;
+            }
+            currentNumOfOnes = 0;
+        }
     }
-    return Pattern.matches('1*', intString).length();
-    
+    return largestNumOfOnes;
 }
