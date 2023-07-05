@@ -1,0 +1,13 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    Map<String, String> combinations = new Map<String, String>{
+        'rock' => 'scissors',
+        'paper' => 'rock',
+        'scissors' => 'paper'
+    };
+    
+    if (player1 == player2) return 0;
+    
+    return combinations.get(player1) == player2 ? 1 : 2;
+   
+
+}
