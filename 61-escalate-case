@@ -1,5 +1,5 @@
 public void escalateIfMeetsCriteria(Case c) {
-    if (c.Status == 'In Progress' && (c.Type == 'Mechanical' || c.Type == 'Electrical') && c.Reason == 'Breakdowm')
+    if (c.Status == 'In Progress' && (c.Type == 'Mechanical' || c.Type == 'Electrical') && c.Reason == 'Breakdown')
     {
         c.IsEscalated = true;
     }
