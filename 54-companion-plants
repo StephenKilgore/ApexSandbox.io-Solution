@@ -1,0 +1,11 @@
+public Boolean companionPlants(String plant1, String plant2) {
+    Map<String,String> companionList = new Map<String, String>{
+        'lettuce' => 'cucumbers,onions',
+        'cucumbers' => 'lettuce',
+        'onions' => 'lettuce,carrots,tomatoes',
+        'carrots' => 'onions',
+        'tomatoes' => 'onions'
+    };
+    
+    return companionList.get(plant1).indexOf(plant2) > -1;
+}
