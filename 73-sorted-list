@@ -2,7 +2,7 @@ public boolean isSorted(List<Integer> numbers) {
     
     String direction = '';
 
-    if (numbers.size < 3) return true;
+    if (numbers.size() < 3) return true;
 
     for (Integer i = 0; i < numbers.size(); i++)
     {
