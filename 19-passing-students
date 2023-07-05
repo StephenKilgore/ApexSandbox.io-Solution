@@ -1,0 +1,7 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    Integer trueCount = 0;
+    if (passedExam) trueCount++;
+    if (passedAssignments) trueCount++;
+    if (passedProject) trueCount++;
+    return trueCount >= 2;
+}
