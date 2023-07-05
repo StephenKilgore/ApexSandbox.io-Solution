@@ -9,6 +9,10 @@ public Integer secondLargest(List<Integer> numbers) {
             penultimate = ultimate;
             ultimate = n;
         }
+        else if (n < ultimate && n> penultimate)
+        {
+            penultimate = n;
+        }
     }
     return penultimate;
 }
