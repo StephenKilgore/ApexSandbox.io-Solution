@@ -1,0 +1,9 @@
+public List<Integer> positiveIntegers(List<Integer> numbers) {
+    List<Integer> newInts = new List<Integer>();
+
+    for (Integer n : numbers)
+    {
+        if (n > 0) newInts.add(n);
+    }
+    return newInts;
+}
