@@ -1,9 +1,17 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
-    Integer numOfOnes = 0;
+    Integer currentNumOfOnes = 0;
+    Integer largestNumOfOnes = 0;
 
     for (Integer num : numbers)
     {
-        numOfOnes = num == 1 ? numOfOnes+1 : 0;
+        if (num == 1)
+        {
+            currentNumOfOnes++;
+        }
+        else {
+            largestNumOfOnes = currentNumOfOnes;
+            currentNumOfOnes = 0;
+        }
     }
-    return numOfOnes;
+    return largestNumOfOnes;
 }
