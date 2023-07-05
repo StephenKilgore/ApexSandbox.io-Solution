@@ -1,0 +1,8 @@
+public String changeTimeFormat(String strTime) {
+    Integer hours = Integer.valueOf(strTime.subString(0,strTime.indexOf(':')));
+    if (hours > 0 && hours < 12) return strTime + ' AM';
+    if (hours == 12) return strTime + ' PM';
+    if (hours == 0) return '12:' + strTime.subString(strTime.indexOf(':')+1, strTime.length()) + ' AM';
+    hours -= 12;
+    return String.valueOf(hours + ':' + strTime.subString(strTime.indexOf(':')+1, strTime.length())).leftPad(5,'0') + ' PM';
+}
