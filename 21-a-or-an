@@ -1,0 +1,4 @@
+public String aOrAn(String word) {
+    String vowels = 'aeiou';
+    return vowels.indexOf(word.subString(0,1)) > -1  ? 'an ' + word : 'a ' + word;
+}
