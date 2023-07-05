@@ -5,4 +5,5 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     {
         fullNameList.add(firstNames[0] + ' ' + lastNames[0]);
     }
+    return fullNameList;
 }
