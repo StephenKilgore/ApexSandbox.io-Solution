@@ -1,4 +1,4 @@
 public String employeeEmail(Map<String, String> employeeIdToEmail, String employeeId) {
-    if (!employeeIdToEmail.hasKey(employeeId)) return 'info@apexsandbox.io';
+    if (!employeeIdToEmail.containsKey(employeeId)) return 'info@apexsandbox.io';
     return employeeIdToEmail.get(employeeId);
 }
