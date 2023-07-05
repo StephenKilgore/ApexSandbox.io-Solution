@@ -1,0 +1,13 @@
+public String reverseWordsInASentence(String sentence){
+    if (sentence == '') return '';
+    if (sentence == null) return null;
+    return recursive_reverse(sentence, '');
+}
+
+public static  String recursive_reverse(String sentence, String newsentence)
+{
+    Integer spaceIndex = sentence.indexOf(' ');
+    if (spaceIndex < 0) return sentence.trim() + ' ' + newsentence.trim(); 
+    return recursive_reverse(sentence.subString(spaceIndex+1, sentence.length()), sentence.subString(0,spaceIndex) + ' ' + newsentence);
+
+}
