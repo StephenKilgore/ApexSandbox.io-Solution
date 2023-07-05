@@ -18,5 +18,5 @@ public boolean isSorted(List<Integer> numbers) {
         return (direction == 'desc' && numbers[i] > numbers[i+2]) || (direction == 'asc' && numbers[i] < numbers[i+2]); 
 
     }
-    return false;
+    return true;
 }
