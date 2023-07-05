@@ -1,4 +1,4 @@
 public Boolean containsDuplicates(List<Integer> nums) {
     Set<Integer> numSet = new Set<Integer>(nums);
-    return numSet.size() == nums.size();
+    return numSet.size() != nums.size();
 }
