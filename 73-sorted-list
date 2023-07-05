@@ -6,7 +6,20 @@ public boolean isSorted(List<Integer> numbers) {
 
     for (Integer i = 0; i < numbers.size(); i++)
     {
-
+        if (i != numbers.size()-1 && numbers[i] != numbers[i+1])
+        {
+            if (direction == '')
+            {
+                direction = numbers[i] < numbers[i+1] ? 'desc' : 'asc';
+            }
+            else
+            {
+                if ((direction == 'asc' && numbers[i] > numbers[i+1]) || (direction == 'desc' && numbers[i] < numbers[i+1]))
+                {
+                    return false;
+                }
+            }
+        }
     }
     return true;
 }
