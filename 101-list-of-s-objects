@@ -1,0 +1,21 @@
+public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+{
+    if (accounts == null && contacts == null) return new List<SObject>();
+
+    List<SObject> results = new List<SObject>();
+
+    if (accounts != null) {
+        for (Account a : accounts)
+        {
+            results.add(a);
+        }
+    }
+    if (contacts != null)
+    {
+        for (Contact c : contacts)
+        {
+            results.add(c);
+        }
+    }   
+    return results;
+}
