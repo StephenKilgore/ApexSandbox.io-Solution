@@ -64,7 +64,7 @@ public class LinkedList{
             return oldTailData;
         }
 
-        Node penultimateNode = null;
+        Node penultimateNode = this.head;
 
         for (Integer i = 1; i <= this.size-1; i++)
         {
