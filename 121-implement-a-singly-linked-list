@@ -28,6 +28,8 @@ public class LinkedList{
 
         Integer oldHeadData = this.head.data;
         this.head = this.head.next;
+        this.size--;
+
         return oldHeadData;
     }
     public void addToTail(Integer value){
@@ -43,9 +45,31 @@ public class LinkedList{
         this.tail = newNode;
     }
     public Integer removeFromTail(){
+
         if (this.size < 1) return null;
 
         Integer oldTailData = tail.data;
+
+        if (this.size == 1)
+        {
+            this.head == null;
+            this.tail == null;
+            this.size == 0;
+            return oldTailData;
+        }
+
+        Node penultimateNode = null;
+
+        for (Integer i = 1; i <= this.size-1; i++)
+        {
+          if (i == this.size-1)
+          {
+              break;
+          }
+          penultimateNode = penultimateNode.next;
+        }
+
+        this.tail = penultimateNode;
         return oldTailData;
     }
     public Integer size(){ return this.size; }    
