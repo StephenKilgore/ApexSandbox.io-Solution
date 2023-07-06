@@ -52,6 +52,8 @@ public class LinkedList{
 
         if (this.size < 1) return null;
 
+        this.size--;
+
         Integer oldTailData = tail.data;
 
         if (this.size == 1)
