@@ -56,15 +56,14 @@ public class LinkedList{
             this.head = null;
             this.tail = null;
             this.size = 0;
-            system.debug('test');
             return oldTailData;
         }
 
         Node penultimateNode = null;
 
-        for (Integer i = 1; i <= this.size-1; i++)
+        for (Integer i = 1; i <= this.size; i++)
         {
-          if (i == this.size-1)
+          if (i == this.size)
           {
               break;
           }
