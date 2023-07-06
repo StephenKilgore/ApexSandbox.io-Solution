@@ -63,18 +63,15 @@ public class LinkedList{
             return oldTailData;
         }
 
-        Node penultimateNode = this.head;
+        Node current = this.head;
+        Node newTail = null;
 
-        for (Integer i = 1; i <= this.size-1; i++)
+        while (current.next != null)
         {
-          if (i == this.size-1)
-          {
-              break;
-          }
-          penultimateNode = penultimateNode.next;
+            newTail = current;
+            current = current.next;
         }
-
-        this.tail = penultimateNode;
+        this.tail = newTail;
         return oldTailData;
     }
     public Integer size(){ return this.size; }    
