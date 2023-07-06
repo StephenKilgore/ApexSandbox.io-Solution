@@ -56,6 +56,7 @@ public class LinkedList{
             this.head = null;
             this.tail = null;
             this.size = 0;
+            system.debug('test');
             return oldTailData;
         }
 
