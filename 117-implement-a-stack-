@@ -6,11 +6,11 @@ public class Stack {
     }
     
     public Object pop() {
-        stackList.remove(stackList.size()-1);
+        return stackList.remove(stackList.size()-1);
     }
     
     public Integer size() {
-        //implement size
+        return stackList.size();
     }
     
     public Object peek(){
