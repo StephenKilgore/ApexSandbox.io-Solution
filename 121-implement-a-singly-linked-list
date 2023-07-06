@@ -72,6 +72,7 @@ public class LinkedList{
             current = current.next;
         }
         this.tail = newTail;
+        this.tail.next = null;
         return oldTailData;
     }
     public Integer size(){ return this.size; }    
