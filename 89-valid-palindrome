@@ -1,0 +1,11 @@
+public Boolean isPalindrome(String str){
+    str = str.toLowerCase().replaceAll('[^a-zA-Z0-9]', '');
+    for (Integer i = 0; i < str.length; i++)
+    {
+        for (Integer j == str.length-1; j >= 0; j--)
+        {
+            if (str[i] != str[j]) return false;
+        }
+    }
+    return true;
+}
