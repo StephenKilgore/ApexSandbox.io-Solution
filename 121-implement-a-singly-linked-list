@@ -1,5 +1,5 @@
 public class LinkedList{
-    public Node head {get; private set}
+    public Node head {get; private set};
     public void addToFront(Integer value){}
     public Integer removeFromFront(){}
     public void addToTail(Integer value){}
