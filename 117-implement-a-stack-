@@ -6,7 +6,7 @@ public class Stack {
     }
     
     public Object pop() {
-        return stackList.remove(stackList.size()-1);
+        return stackList?.remove(stackList.size()-1);
     }
     
     public Integer size() {
@@ -14,7 +14,7 @@ public class Stack {
     }
     
     public Object peek(){
-        return stackList.get(stackList.size()-1);
+        return stackList?.get(stackList.size()-1);
     }
     
     public Boolean isEmpty() {
