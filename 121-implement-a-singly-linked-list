@@ -1,5 +1,12 @@
 public class LinkedList{
     Node head;
+    Node tail;
+    
+    public LinkedList() {
+        this.tail = null;
+        this.head = null;
+        this.size = 0;
+    }
     public void addToFront(Integer value){}
     public Integer removeFromFront(){}
     public void addToTail(Integer value){}
