@@ -64,7 +64,7 @@ public class LinkedList{
 
         Node penultimateNode = null;
 
-        for (Integer i = 1; i <= this.size; i++)
+        for (Integer i = 1; i < this.size; i++)
         {
           if (i == this.size)
           {
