@@ -51,16 +51,13 @@ public class LinkedList{
 
         if (this.size < 1) return null;
 
-        this.size--;
-
-        Integer oldTailData = tail.data;
-
         if (this.size == 1)
         {
+            Node remove = this.tail;
             this.head = null;
             this.tail = null;
             this.size = 0;
-            return oldTailData;
+            return remove.data;
         }
 
         Node current = this.head;
