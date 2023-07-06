@@ -14,7 +14,7 @@ public class Stack {
     }
     
     public Object peek(){
-        return stackList[stackList.size()-1];
+        return stackList.get(stackList.size()-1);
     }
     
     public Boolean isEmpty() {
