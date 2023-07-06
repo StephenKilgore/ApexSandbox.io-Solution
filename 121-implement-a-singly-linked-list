@@ -11,6 +11,8 @@ public class LinkedList{
     public void addToFront(Integer value){
         
         Node newNode = new Node(value);
+        this.size++;
+
         if (this.head == null)
         {
             this.head = newNode;
@@ -20,10 +22,33 @@ public class LinkedList{
         newNode.next = this.head;
         this.head = newNode;
     }
-    public Integer removeFromFront(){}
-    public void addToTail(Integer value){}
-    public Integer removeFromTail(){}
-    public Integer size(){}    
+    public Integer removeFromFront(){
+        
+        if (this.size <1) return null;
+
+        Integer oldHeadData = this.head.data;
+        this.head = this.head.next;
+        return oldHeadData;
+    }
+    public void addToTail(Integer value){
+
+        Node newNode = new Node(value);
+
+        if (this.tail == null) {
+            this.tail = newNode;
+            this.head = this.tail;
+            return;
+        }
+        newNode.next = this.tail;
+        this.tail = newNode;
+    }
+    public Integer removeFromTail(){
+        if (this.size < 1) return null;
+
+        Integer oldTailData = tail.data;
+        return oldTailData;
+    }
+    public Integer size(){ return this.size; }    
 }
 
 public class Node{
