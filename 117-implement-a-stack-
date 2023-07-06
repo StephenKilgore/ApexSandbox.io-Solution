@@ -6,7 +6,7 @@ public class Stack {
     }
     
     public Object pop() {
-        //implement pop
+        stackList.remove(stackList.size()-1);
     }
     
     public Integer size() {
