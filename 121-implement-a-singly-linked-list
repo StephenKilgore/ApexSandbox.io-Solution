@@ -1,6 +1,7 @@
 public class LinkedList{
     Node head;
     Node tail;
+    Integer size;
     
     public LinkedList() {
         this.tail = null;
